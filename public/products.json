@@ -1,0 +1,154 @@
+[
+  {
+    "product_id": "101",
+    "product_title": "iPhone 14 Pro",
+    "product_image": "https://example.com/images/iphone-14-pro.jpg",
+    "category": "Phone",
+    "price": 999.99,
+    "description": "Apple's latest iPhone 14 Pro with A16 Bionic chip, ProMotion, and advanced camera system.",
+    "Specification": [
+      "6.1-inch Super Retina XDR display",
+      "128GB storage",
+      "48MP main camera, 12MP ultra-wide"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "102",
+    "product_title": "Samsung Galaxy S23 Ultra",
+    "product_image": "https://example.com/images/galaxy-s23-ultra.jpg",
+    "category": "Phone",
+    "price": 1199.99,
+    "description": "Flagship Galaxy phone with stunning display, powerful processor, and versatile camera setup.",
+    "Specification": [
+      "6.8-inch Dynamic AMOLED 2X display",
+      "256GB storage",
+      "108MP main camera, 12MP ultra-wide, 10MP telephoto"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "103",
+    "product_title": "Google Pixel 7",
+    "product_image": "https://example.com/images/pixel-7.jpg",
+    "category": "Phone",
+    "price": 599.99,
+    "description": "Google's Pixel 7 with Tensor G2 chip and an incredible camera for stunning photos.",
+    "Specification": [
+      "6.3-inch OLED display",
+      "128GB storage",
+      "50MP wide camera, 12MP ultra-wide"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "104",
+    "product_title": "OnePlus 11 5G",
+    "product_image": "https://example.com/images/oneplus-11.jpg",
+    "category": "Phone",
+    "price": 699.99,
+    "description": "Fast and smooth 5G smartphone with Snapdragon 8 Gen 2 and ultra-fast charging.",
+    "Specification": [
+      "6.7-inch Fluid AMOLED display",
+      "128GB storage",
+      "50MP main camera, 48MP ultra-wide, 32MP telephoto"
+    ],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "105",
+    "product_title": "Xiaomi Mi 13",
+    "product_image": "https://example.com/images/xiaomi-mi-13.jpg",
+    "category": "Phone",
+    "price": 499.99,
+    "description": "A budget-friendly smartphone with high-end features and excellent battery life.",
+    "Specification": [
+      "6.3-inch AMOLED display",
+      "128GB storage",
+      "50MP main camera, 12MP ultra-wide"
+    ],
+    "availability": false,
+    "rating": 4.4
+  },
+  {
+    "product_id": "106",
+    "product_title": "Sony Xperia 5 IV",
+    "product_image": "https://example.com/images/xperia-5-iv.jpg",
+    "category": "Phone",
+    "price": 799.99,
+    "description": "Compact flagship phone with 4K HDR OLED display and pro-grade camera technology.",
+    "Specification": [
+      "6.1-inch 4K HDR OLED display",
+      "128GB storage",
+      "12MP triple camera setup"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "201",
+    "product_title": "MacBook Air M2",
+    "product_image": "https://example.com/images/macbook-air-m2.jpg",
+    "category": "Laptop",
+    "price": 1199.99,
+    "description": "Apple's thinnest and lightest laptop with M2 chip, all-day battery life, and fanless design.",
+    "Specification": [
+      "13.6-inch Retina display",
+      "8GB RAM",
+      "256GB SSD",
+      "Apple M2 chip"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "202",
+    "product_title": "Dell XPS 13",
+    "product_image": "https://example.com/images/dell-xps-13.jpg",
+    "category": "Laptop",
+    "price": 999.99,
+    "description": "Premium ultrabook with InfinityEdge display and high-performance components.",
+    "Specification": [
+      "13.4-inch FHD+ display",
+      "16GB RAM",
+      "512GB SSD",
+      "Intel Core i7-1250U"
+    ],
+    "availability": false,
+    "rating": 4.8
+  },
+  {
+    "product_id": "301",
+    "product_title": "Apple Watch Series 8",
+    "product_image": "https://example.com/images/apple-watch-8.jpg",
+    "category": "Smart Watches",
+    "price": 429.99,
+    "description": "Advanced health features, including ECG and blood oxygen monitoring, with fast charging.",
+    "Specification": [
+      "1.9-inch Always-On Retina display",
+      "ECG and Blood Oxygen apps",
+      "18-hour battery life"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "302",
+    "product_title": "Samsung Galaxy Watch 5",
+    "product_image": "https://example.com/images/galaxy-watch-5.jpg",
+    "category": "Smart Watches",
+    "price": 329.99,
+    "description": "Durable and feature-packed smartwatch with advanced fitness tracking and GPS.",
+    "Specification": [
+      "1.4-inch Super AMOLED display",
+      "Heart rate monitor and GPS",
+      "80-hour battery life"
+    ],
+    "availability": true,
+    "rating": 4.6
+  }
+]
