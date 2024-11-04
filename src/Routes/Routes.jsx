@@ -7,11 +7,13 @@ import ProductDetials from "../Pages/ProductDetials";
 import DashBoard from "../Pages/DashBoard";
 import Cart from "../components/Cart";
 import Wishlist from "../components/Wishlist";
+import Error from "../components/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",

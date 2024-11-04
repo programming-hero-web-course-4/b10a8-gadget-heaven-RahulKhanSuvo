@@ -1,21 +1,35 @@
 import { useContext, useEffect, useState } from "react";
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import SubHeading from "../components/SubHeading";
 import RatingComponent from "../components/RatingComponent";
 import { CiHeart } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
-import { addCart } from "../Utils";
+import { addCart, getAllCarts } from "../Utils";
 import CartContext from "../Routes/CartContext";
-import { addLove } from "../Utils/loveList";
+import { addLove, getAllLove } from "../Utils/loveList";
 const ProductDetials = () => {
   const { handelCart, handelLoveNav } = useContext(CartContext);
 
   const { id } = useParams();
   const productsData = useLoaderData();
   const [product, setProduct] = useState({});
+  const [isAdded, setIsAdded] = useState(false);
+  const [isLoveAdded, setLoveAdded] = useState(false);
   useEffect(() => {
     const oneData = productsData.find((product) => product.product_id === id);
     setProduct(oneData);
+    const allCart = getAllCarts();
+    const isExist = allCart.find(
+      (item) => item.product_id === oneData.product_id
+    );
+    if (isExist) {
+      setIsAdded(true);
+    }
+    const allLove = getAllLove();
+    const i = allLove.find((item) => item.product_id === oneData.product_id);
+    if (i) {
+      setLoveAdded(true);
+    }
   }, [productsData, id]);
   const {
     price,
@@ -29,10 +43,12 @@ const ProductDetials = () => {
   const addToCart = (product) => {
     addCart(product);
     handelCart(product);
+    setIsAdded(true);
   };
   const addToLove = (product) => {
     addLove(product);
     handelLoveNav(product);
+    setLoveAdded(true);
   };
   return (
     <div className="relative">
@@ -75,13 +91,18 @@ const ProductDetials = () => {
           </div>
           <div className="mt-4 flex gap-3 ">
             <button
+              disabled={isAdded}
               onClick={() => addToCart(product)}
-              className="flex items-center gap-2 px-6 py-3 text-white bg-[#9538E2] rounded-full font-bold"
+              className="flex items-center gap-2 disabled:bg-gray-600 px-6 py-3 text-white bg-[#9538E2] rounded-full font-bold"
             >
               Add To Card <IoCartOutline className="text-xl" />
             </button>
-            <button onClick={() => addToLove(product)}>
-              <CiHeart className="size-14 text-2xl  rounded-full p-2 border-2 " />
+            <button
+              disabled={isLoveAdded}
+              className="bg-red-600 text-2xl disabled:bg-gray-600 rounded-full border-2 p-2"
+              onClick={() => addToLove(product)}
+            >
+              <CiHeart className="size-14 text-white    " />
             </button>
           </div>
         </div>
