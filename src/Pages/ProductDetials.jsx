@@ -36,7 +36,7 @@ const ProductDetials = () => {
   };
   return (
     <div className="relative">
-      <div className="bg-[#9538E2] pb-64">
+      <div className="bg-[#9538E2] pb-64 pt-8">
         <SubHeading
           title={"Product Details"}
           subTitle={

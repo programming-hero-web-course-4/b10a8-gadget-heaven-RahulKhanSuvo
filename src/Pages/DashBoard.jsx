@@ -27,7 +27,7 @@ const DashBoard = () => {
 
   return (
     <div className="">
-      <div className="bg-[#9538E2]">
+      <div className="bg-[#9538E2] py-8">
         <div className="container mx-auto">
           <SubHeading
             title={"Dashboard"}

@@ -11,8 +11,7 @@ const MainLayout = () => {
   const [loves, setLoves] = useState([]);
 
   const handelCart = (data) => {
-    const exists = product.some((item) => item.product_id === data.product_id);
-    if (exists) return;
+    if (product.some((item) => item.product_id === data.product_id)) return;
     setProduct([...product, data]);
   };
 
@@ -23,8 +22,7 @@ const MainLayout = () => {
   };
 
   const handelLoveNav = (data) => {
-    const exists = loves.some((item) => item.product_id === data.product_id);
-    if (exists) return;
+    if (loves.some((item) => item.product_id === data.product_id)) return;
     setLoves([...loves, data]);
   };
 
@@ -33,6 +31,31 @@ const MainLayout = () => {
       prevLoves.filter((item) => item.product_id !== productId)
     );
   };
+
+  const containerBg =
+    pathname === "/" ||
+    pathname === "/category/Phone" ||
+    pathname === "/category/Laptop" ||
+    pathname === "/category/Accessories" ||
+    pathname === "/category/Smart%20Watches"
+      ? "bg-[#9538E2] mx-4 rounded-t-lg"
+      : "text-black bg-white";
+  const mainBg =
+    pathname === "/" ||
+    pathname === "/category/Phone" ||
+    pathname === "/category/Laptop" ||
+    pathname === "/category/Accessories" ||
+    pathname === "/category/Smart%20Watches"
+      ? "bg-[#D9D9D9] pt-4"
+      : "bg-[#D9D9D9]";
+  const innerContainerMargin =
+    pathname === "/" ||
+    pathname === "/category/Phone" ||
+    pathname === "/category/Laptop" ||
+    pathname === "/category/Accessories" ||
+    pathname === "/category/Smart%20Watches"
+      ? "mx-4"
+      : "";
 
   return (
     <CartContext.Provider
@@ -45,13 +68,13 @@ const MainLayout = () => {
         removeWishList,
       }}
     >
-      <div className="bg-[#D9D9D9] pt-4">
-        <div className="bg-[#9538E2] mx-4 rounded-t-lg">
+      <div className={mainBg}>
+        <div className={containerBg}>
           <div className="container mx-auto">
             <NavBar />
           </div>
         </div>
-        <div className="mx-4 min-h-[calc(100vh-280px)]">
+        <div className={`${innerContainerMargin} min-h-[calc(100vh-280px)]`}>
           <Outlet />
         </div>
 

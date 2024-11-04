@@ -1,21 +1,42 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { useContext } from "react";
 import CartContext from "../Routes/CartContext";
 
 const NavBar = () => {
+  const { pathname } = useLocation();
   const { product, loves } = useContext(CartContext);
 
   return (
     <>
-      <div className="flex text-white justify-between pt-4 px-4">
+      <div
+        className={`flex ${
+          pathname === "/" ||
+          pathname === "/category/Phone" ||
+          pathname === "/category/Laptop" ||
+          pathname === "/category/Accessories" ||
+          pathname === "/category/Smart%20Watches"
+            ? "text-white pt-4"
+            : "text-black  py-6 "
+        } justify-between`}
+      >
         <h3 className="font-bold text-lg">Gadget Heaven</h3>
         <ul className="flex gap-8 items-center font-normal">
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-yellow-400" : "text-white"
+                isActive
+                  ? "text-yellow-400"
+                  : `t${
+                      pathname === "/" ||
+                      pathname === "/category/Phone" ||
+                      pathname === "/category/Laptop" ||
+                      pathname === "/category/Accessories" ||
+                      pathname === "/category/Smart%20Watches"
+                        ? "text-white"
+                        : "text-black"
+                    }`
               }
               to={"/"}
             >
@@ -25,7 +46,17 @@ const NavBar = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-yellow-400" : "text-white"
+                isActive
+                  ? "text-yellow-400"
+                  : `${
+                      pathname === "/" ||
+                      pathname === "/category/Phone" ||
+                      pathname === "/category/Laptop" ||
+                      pathname === "/category/Accessories" ||
+                      pathname === "/category/Smart%20Watches"
+                        ? "text-white"
+                        : "text-black"
+                    }`
               }
               to={"/statistics"}
             >
@@ -35,7 +66,17 @@ const NavBar = () => {
           <li>
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-yellow-400" : "text-white"
+                isActive
+                  ? "text-yellow-400"
+                  : `${
+                      pathname === "/" ||
+                      pathname === "/category/Phone" ||
+                      pathname === "/category/Laptop" ||
+                      pathname === "/category/Accessories" ||
+                      pathname === "/category/Smart%20Watches"
+                        ? "text-white"
+                        : "text-black"
+                    }`
               }
               to={"/dashboard"}
             >
