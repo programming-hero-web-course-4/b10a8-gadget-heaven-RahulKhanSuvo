@@ -1,9 +1,12 @@
+import { Outlet, useLoaderData } from "react-router-dom";
 import Banner from "../components/Banner";
 import Heading from "../components/Heading";
+import Categories from "../components/Categories";
 
 const Home = () => {
+  const categories = useLoaderData();
   return (
-    <div>
+    <div className="  ">
       <div className="relative">
         <Heading></Heading>
         <div className=" absolute -translate-y-72   lg:translate-x-80 ">
@@ -13,7 +16,14 @@ const Home = () => {
           Explore Cutting-Edge Gadgets
         </h3>
       </div>
-      <div></div>
+      <div className="flex gap-6 container mx-auto mt-12">
+        <div>
+          <Categories categories={categories}></Categories>
+        </div>
+        <div>
+          <Outlet></Outlet>
+        </div>
+      </div>
     </div>
   );
 };
