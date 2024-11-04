@@ -5,12 +5,15 @@ import Footer from "../components/Footer";
 const MainLayout = () => {
   return (
     <div>
-      <div className="bg-[#9538E2] mt-4 mx-4 rounded-md">
-        <div className="container  mx-auto">
+      <div className=" bg-[#9538E2] mt-4 mx-4 rounded-t-lg">
+        <div className="container mx-auto">
           <NavBar></NavBar>
-          <Outlet></Outlet>
         </div>
       </div>
+      <div className="mx-4 min-h-screen">
+        <Outlet></Outlet>
+      </div>
+
       <Footer></Footer>
     </div>
   );
