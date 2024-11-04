@@ -7,7 +7,7 @@ const Categories = ({ categories }) => {
         className={({ isActive }) =>
           isActive
             ? "bg-[#9538E2] font-extrabold text-white  w-36 px-5 py-2 rounded-full"
-            : ""
+            : "w-36 px-5 py-2 rounded-full bg-[#F2F2F3]"
         }
         to={"/"}
       >
@@ -20,7 +20,7 @@ const Categories = ({ categories }) => {
               ? "bg-[#9538E2] font-extrabold text-white  w-36 px-5 py-2 rounded-full"
               : "w-36 px-5 py-2 rounded-full bg-[#F2F2F3]"
           }
-          to={`/category/${category.slug}`}
+          to={`/category/${category.category}`}
           key={category.id}
         >
           {category.category}

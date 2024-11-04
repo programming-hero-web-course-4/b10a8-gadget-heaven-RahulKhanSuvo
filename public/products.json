@@ -6,7 +6,7 @@
     "category": "Phone",
     "price": 999.99,
     "description": "Apple's latest iPhone 14 Pro with A16 Bionic chip, ProMotion, and advanced camera system.",
-    "Specification": [
+    "specification": [
       "6.1-inch Super Retina XDR display",
       "128GB storage",
       "48MP main camera, 12MP ultra-wide"
@@ -21,7 +21,7 @@
     "category": "Phone",
     "price": 1199.99,
     "description": "Flagship Galaxy phone with stunning display, powerful processor, and versatile camera setup.",
-    "Specification": [
+    "specification": [
       "6.8-inch Dynamic AMOLED 2X display",
       "256GB storage",
       "108MP main camera, 12MP ultra-wide, 10MP telephoto"
@@ -36,7 +36,7 @@
     "category": "Phone",
     "price": 599.99,
     "description": "Google's Pixel 7 with Tensor G2 chip and an incredible camera for stunning photos.",
-    "Specification": [
+    "specification": [
       "6.3-inch OLED display",
       "128GB storage",
       "50MP wide camera, 12MP ultra-wide"
@@ -51,7 +51,7 @@
     "category": "Phone",
     "price": 699.99,
     "description": "Fast and smooth 5G smartphone with Snapdragon 8 Gen 2 and ultra-fast charging.",
-    "Specification": [
+    "specification": [
       "6.7-inch Fluid AMOLED display",
       "128GB storage",
       "50MP main camera, 48MP ultra-wide, 32MP telephoto"
@@ -66,7 +66,7 @@
     "category": "Phone",
     "price": 499.99,
     "description": "A budget-friendly smartphone with high-end features and excellent battery life.",
-    "Specification": [
+    "specification": [
       "6.3-inch AMOLED display",
       "128GB storage",
       "50MP main camera, 12MP ultra-wide"
@@ -81,7 +81,7 @@
     "category": "Phone",
     "price": 799.99,
     "description": "Compact flagship phone with 4K HDR OLED display and pro-grade camera technology.",
-    "Specification": [
+    "specification": [
       "6.1-inch 4K HDR OLED display",
       "128GB storage",
       "12MP triple camera setup"
@@ -96,7 +96,7 @@
     "category": "Laptop",
     "price": 1199.99,
     "description": "Apple's thinnest and lightest laptop with M2 chip, all-day battery life, and fanless design.",
-    "Specification": [
+    "specification": [
       "13.6-inch Retina display",
       "8GB RAM",
       "256GB SSD",
@@ -112,7 +112,7 @@
     "category": "Laptop",
     "price": 999.99,
     "description": "Premium ultrabook with InfinityEdge display and high-performance components.",
-    "Specification": [
+    "specification": [
       "13.4-inch FHD+ display",
       "16GB RAM",
       "512GB SSD",
@@ -128,7 +128,7 @@
     "category": "Smart Watches",
     "price": 429.99,
     "description": "Advanced health features, including ECG and blood oxygen monitoring, with fast charging.",
-    "Specification": [
+    "specification": [
       "1.9-inch Always-On Retina display",
       "ECG and Blood Oxygen apps",
       "18-hour battery life"
@@ -143,12 +143,61 @@
     "category": "Smart Watches",
     "price": 329.99,
     "description": "Durable and feature-packed smartwatch with advanced fitness tracking and GPS.",
-    "Specification": [
+    "specification": [
       "1.4-inch Super AMOLED display",
       "Heart rate monitor and GPS",
       "80-hour battery life"
     ],
     "availability": true,
     "rating": 4.6
+  },
+  {
+    "product_id": "401",
+    "product_title": "JBL Wireless Earbuds",
+    "product_image": "https://i.ibb.co.com/Nynbx2X/3773-21274.jpg",
+    "category": "Accessories",
+    "price": 99.99,
+    "description": "Compact and powerful wireless earbuds with deep bass and clear sound.",
+    "specification": [
+      "Bluetooth 5.2",
+      "20-hour battery life",
+      "Water-resistant design"
+    ],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": "402",
+    "product_title": "Anker PowerCore 10000",
+    "product_image": "https://i.ibb.co.com/5vvffZC/Anker-Power-Core-10000-PD-Redux-18-W-a-4218.jpg",
+    "category": "Accessories",
+    "price": 49.99,
+    "description": "Portable and compact power bank with high-speed charging capabilities.",
+    "specification": [
+      "10000mAh capacity",
+      "Fast charging support",
+      "Lightweight and portable"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+   {
+    "product_id": "403",
+    "product_title": "ASUS ROG Zephyrus G15",
+    "product_image": "https://i.ibb.co.com/9GjpDVT/ASUSZephyrus-GGA502-DU-1-02.jpg",
+    "category": "Laptop",
+    "price": 1599.99,
+    "description": "High-performance gaming laptop with AMD Ryzen 9, NVIDIA RTX 3080, and a fast 165Hz display.",
+    "specification": [
+      "15.6-inch QHD display, 165Hz",
+      "16GB RAM",
+      "1TB SSD",
+      "AMD Ryzen 9 5900HS",
+      "NVIDIA GeForce RTX 3080"
+    ],
+    "availability": true,
+    "rating": 4.8
   }
+
+  
 ]
