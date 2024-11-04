@@ -8,7 +8,7 @@ import { addCart } from "../Utils";
 import CartContext from "../Routes/CartContext";
 import { addLove } from "../Utils/loveList";
 const ProductDetials = () => {
-  const { handelCart } = useContext(CartContext);
+  const { handelCart, handelLoveNav } = useContext(CartContext);
 
   const { id } = useParams();
   const productsData = useLoaderData();
@@ -32,6 +32,7 @@ const ProductDetials = () => {
   };
   const addToLove = (product) => {
     addLove(product);
+    handelLoveNav(product);
   };
   return (
     <div className="relative">

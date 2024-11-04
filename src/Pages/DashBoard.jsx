@@ -1,8 +1,12 @@
 import { Link, Outlet } from "react-router-dom";
 import SubHeading from "../components/SubHeading";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import CartContext from "../Routes/CartContext";
+import RemoveContext from "../Utils/RemoveContext";
 
 const DashBoard = () => {
+  const gif = useContext(CartContext);
+
   const [isActive, setIsActive] = useState({
     available: true,
     status: "available",
@@ -20,6 +24,7 @@ const DashBoard = () => {
       });
     }
   };
+
   return (
     <div className="">
       <div className="bg-[#9538E2]">
@@ -58,7 +63,9 @@ const DashBoard = () => {
         </div>
       </div>
       <div className="container mx-auto">
-        <Outlet></Outlet>
+        <RemoveContext.Provider value={gif}>
+          <Outlet></Outlet>
+        </RemoveContext.Provider>
       </div>
     </div>
   );

@@ -1,9 +1,13 @@
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { useLocation } from "react-router-dom";
-const CartCard = ({ item, handelRemove }) => {
+const CartCard = ({ item, handelRemove, removeCartLove }) => {
   const { pathname } = useLocation();
 
   const { price, product_id, product_title, product_image, description } = item;
+  const handelRemoveAll = () => {
+    handelRemove(product_id);
+    removeCartLove(product_id);
+  };
   return (
     <div className="relative">
       <div className="p-8 gap-6 rounded-xl flex bg-white items-center">
@@ -27,10 +31,7 @@ const CartCard = ({ item, handelRemove }) => {
           )}
         </div>
       </div>
-      <button
-        onClick={() => handelRemove(product_id)}
-        className="absolute top-5 right-2"
-      >
+      <button onClick={handelRemoveAll} className="absolute top-5 right-2">
         <IoCloseCircleOutline className="text-red-700 text-4xl" />
       </button>
     </div>

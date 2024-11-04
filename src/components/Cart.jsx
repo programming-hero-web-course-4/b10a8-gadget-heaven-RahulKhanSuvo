@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { getAllCarts, removeCart } from "../Utils";
 import CartCard from "./CartCard";
+import RemoveContext from "../Utils/RemoveContext";
 
 const Cart = () => {
+  const { removeCartLove } = useContext(RemoveContext);
   const [product, setProduct] = useState([]);
   const [cost, setCost] = useState(0);
 
@@ -38,15 +40,20 @@ const Cart = () => {
           </button>
         </div>
       </div>
-      <div className="flex flex-col gap-6">
-        {product.map((item) => (
-          <CartCard
-            handelRemove={handelRemove}
-            item={item}
-            key={item.product_id}
-          ></CartCard>
-        ))}
-      </div>
+      {product.length > 0 ? (
+        <div className="flex flex-col gap-6">
+          {product.map((item) => (
+            <CartCard
+              removeCartLove={removeCartLove}
+              handelRemove={handelRemove}
+              item={item}
+              key={item.product_id}
+            ></CartCard>
+          ))}
+        </div>
+      ) : (
+        <div className="text-center font-bold text-4xl"> No data Found</div>
+      )}
     </div>
   );
 };

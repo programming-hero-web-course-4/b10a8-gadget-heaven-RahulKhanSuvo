@@ -5,7 +5,8 @@ import { useContext } from "react";
 import CartContext from "../Routes/CartContext";
 
 const NavBar = () => {
-  const { product } = useContext(CartContext);
+  const { product, loves } = useContext(CartContext);
+
   return (
     <>
       <div className="flex text-white justify-between pt-4 px-4">
@@ -52,7 +53,15 @@ const NavBar = () => {
               {product.length}
             </p>
           </div>
-          <CiHeart size={24} className="text-black bg-white p-1 rounded-full" />
+          <div className="relative">
+            <CiHeart
+              size={24}
+              className="text-black bg-white p-1 rounded-full"
+            />
+            <p className="absolute text-xs text-black -top-4 right-0">
+              {loves.length}
+            </p>
+          </div>
         </div>
       </div>
     </>
