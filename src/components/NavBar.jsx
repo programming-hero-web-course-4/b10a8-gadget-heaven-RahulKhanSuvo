@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
+import { useContext } from "react";
+import CartContext from "../Routes/CartContext";
 
 const NavBar = () => {
+  const { product } = useContext(CartContext);
   return (
     <>
       <div className="flex text-white justify-between pt-4 px-4">
@@ -40,10 +43,15 @@ const NavBar = () => {
           </li>
         </ul>
         <div className="flex gap-3">
-          <IoCartOutline
-            size={24}
-            className="text-black bg-white p-1 rounded-full"
-          />
+          <div className="relative">
+            <IoCartOutline
+              size={24}
+              className="text-black bg-white p-1 rounded-full"
+            />
+            <p className="absolute text-xs text-black -top-4 right-0">
+              {product.length}
+            </p>
+          </div>
           <CiHeart size={24} className="text-black bg-white p-1 rounded-full" />
         </div>
       </div>

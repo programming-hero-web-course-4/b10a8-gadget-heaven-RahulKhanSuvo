@@ -1,21 +1,24 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import SubHeading from "../components/SubHeading";
 import RatingComponent from "../components/RatingComponent";
 import { CiHeart } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
+import { addCart } from "../Utils";
+import CartContext from "../Routes/CartContext";
+import { addLove } from "../Utils/loveList";
 const ProductDetials = () => {
+  const { handelCart } = useContext(CartContext);
+
   const { id } = useParams();
   const productsData = useLoaderData();
   const [product, setProduct] = useState({});
-  console.log(id);
   useEffect(() => {
     const oneData = productsData.find((product) => product.product_id === id);
     setProduct(oneData);
   }, [productsData, id]);
   const {
     price,
-    product_id,
     product_title,
     product_image,
     description,
@@ -23,6 +26,13 @@ const ProductDetials = () => {
     availability,
     specification,
   } = product;
+  const addToCart = (product) => {
+    addCart(product);
+    handelCart(product);
+  };
+  const addToLove = (product) => {
+    addLove(product);
+  };
   return (
     <div className="relative">
       <div className="bg-[#9538E2] pb-64">
@@ -63,10 +73,13 @@ const ProductDetials = () => {
             </div>
           </div>
           <div className="mt-4 flex gap-3 ">
-            <button className="flex items-center gap-2 px-6 py-3 text-white bg-[#9538E2] rounded-full font-bold">
+            <button
+              onClick={() => addToCart(product)}
+              className="flex items-center gap-2 px-6 py-3 text-white bg-[#9538E2] rounded-full font-bold"
+            >
               Add To Card <IoCartOutline className="text-xl" />
             </button>
-            <button>
+            <button onClick={() => addToLove(product)}>
               <CiHeart className="size-14 text-2xl  rounded-full p-2 border-2 " />
             </button>
           </div>
