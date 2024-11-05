@@ -7,6 +7,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { addCart, getAllCarts } from "../Utils";
 import CartContext from "../Routes/CartContext";
 import { addLove, getAllLove } from "../Utils/loveList";
+import { Helmet } from "react-helmet-async";
 const ProductDetials = () => {
   const { handelCart, handelLoveNav } = useContext(CartContext);
 
@@ -52,6 +53,9 @@ const ProductDetials = () => {
   };
   return (
     <div className="relative">
+      <Helmet>
+        <title>{`${product_title} | Gadget Heaven`}</title>
+      </Helmet>
       <div className="bg-[#9538E2] pb-64 pt-8">
         <SubHeading
           title={"Product Details"}
