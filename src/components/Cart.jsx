@@ -79,10 +79,9 @@ const Cart = () => {
           <h3 className="text-5xl text-green-500 text-center">
             <MdVerified />
           </h3>
-          <h1 className="font-bold">Payment Successfully</h1>
-          <p className="text-gray-400 font-medium">
-            Thanks for purchasing. Total:{cost}
-          </p>
+          <h1 className="font-bold border-b pb-3">Payment Successfully</h1>
+          <p className="text-gray-400 font-medium">Thanks for purchasing.</p>
+          <p>Total:{cost}</p>
           <button
             onClick={closeModal}
             className="bg-[#EBEAEA] rounded-full w-full hover:text-white px-4 py-2 text-black hover:bg-[#9538E2] "

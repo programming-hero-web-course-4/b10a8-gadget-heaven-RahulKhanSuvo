@@ -13,7 +13,7 @@ const CartCard = ({ item, handelRemove, removeCartLove }) => {
       <div className="p-8 gap-6 rounded-xl flex bg-white items-center">
         <div>
           <img
-            className="w-[200px] object-center h-[124px]"
+            className="w-[200px] object-cover h-[150px]"
             src={product_image}
             alt=""
           />

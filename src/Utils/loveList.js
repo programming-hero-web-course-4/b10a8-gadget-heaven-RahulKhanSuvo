@@ -15,12 +15,12 @@ const addLove = (product) => {
   if (isExist) return toast.error("already added");
   carts.push(product);
   localStorage.setItem("love", JSON.stringify(carts));
-  toast.success("Successfully added!");
+  toast.success("Item added To WhishList");
 };
 const removeLove = (id) => {
   const carts = getAllLove();
   const remin = carts.filter((item) => item.product_id !== id);
   localStorage.setItem("love", JSON.stringify(remin));
-  toast.success("Successfully removed!");
+  toast.success(" removed from WhishList!");
 };
 export { addLove, getAllLove, removeLove };
