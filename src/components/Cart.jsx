@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { getAllCarts, removeCart } from "../Utils";
 import CartCard from "./CartCard";
 import RemoveContext from "../Utils/RemoveContext";
@@ -35,7 +35,10 @@ const Cart = () => {
           >
             Sort by Price
           </button>
-          <button className="px-5 rounded-full py-3 bg-[#9538E2] text-white">
+          <button
+            disabled={product.length === 0}
+            className="px-5 disabled:bg-gray-500 rounded-full py-3 bg-[#9538E2] text-white"
+          >
             Purchase
           </button>
         </div>
