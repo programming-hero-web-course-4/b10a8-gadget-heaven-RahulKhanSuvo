@@ -121,36 +121,7 @@
     "availability": false,
     "rating": 4.8
   },
-  {
-    "product_id": "301",
-    "product_title": "Apple Watch Series 8",
-    "product_image": "https://i.ibb.co.com/fS4Yc7c/66556ec97b88f52a8e180d84-apple-watch-gen-8-series-8-45mm.jpg",
-    "category": "Smart Watches",
-    "price": 429.99,
-    "description": "Advanced health features, including ECG and blood oxygen monitoring, with fast charging.",
-    "specification": [
-      "1.9-inch Always-On Retina display",
-      "ECG and Blood Oxygen apps",
-      "18-hour battery life"
-    ],
-    "availability": true,
-    "rating": 4.9
-  },
-  {
-    "product_id": "302",
-    "product_title": "Samsung Galaxy Watch 5",
-    "product_image": "https://i.ibb.co.com/6WppkmY/Galaxy-Watch5-5-800x800.jpg",
-    "category": "Smart Watches",
-    "price": 329.99,
-    "description": "Durable and feature-packed smartwatch with advanced fitness tracking and GPS.",
-    "specification": [
-      "1.4-inch Super AMOLED display",
-      "Heart rate monitor and GPS",
-      "80-hour battery life"
-    ],
-    "availability": true,
-    "rating": 4.6
-  },
+  
   {
     "product_id": "401",
     "product_title": "JBL Wireless Earbuds",

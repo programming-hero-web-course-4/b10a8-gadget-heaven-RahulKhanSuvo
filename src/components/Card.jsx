@@ -11,7 +11,7 @@ const Card = ({ product }) => {
         <h1 className="font-semibold text-lg">{product_title}</h1>
         <p className="mb-4 mt-1 text-[#09080F99]">Price:{price}$</p>
         <Link
-          className="border-[#9538E2] border px-5 rounded-full py-3 "
+          className="border-[#9538E2] font-semibold text-[#9538E2] border-2 px-5 rounded-full py-3 "
           to={`/product/${product_id}`}
         >
           View Details

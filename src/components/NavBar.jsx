@@ -104,22 +104,16 @@ const NavBar = () => {
             </NavLink>
           </li>
         </ul>
-        <div className="flex gap-3">
+        <div className="flex gap-4 ">
           <div className="relative">
-            <IoCartOutline
-              size={24}
-              className="text-black bg-white p-1 rounded-full"
-            />
-            <p className="absolute text-xs text-black -top-4 right-0">
+            <IoCartOutline className="text-white text-4xl bg-blue-600 p-2 rounded-full shadow-lg transition-transform transform hover:scale-105" />
+            <p className="absolute text-xs text-orange-500 font-semibold -top-4 right-0">
               {product.length}
             </p>
           </div>
           <div className="relative">
-            <CiHeart
-              size={24}
-              className="text-black bg-white p-1 rounded-full"
-            />
-            <p className="absolute text-xs text-black -top-4 right-0">
+            <CiHeart className="text-white bg-red-600 p-2 rounded-full shadow-lg text-4xl transition-transform transform hover:scale-105" />
+            <p className="absolute text-xs text-lime-500 font-semibold -top-4 right-0">
               {loves.length}
             </p>
           </div>

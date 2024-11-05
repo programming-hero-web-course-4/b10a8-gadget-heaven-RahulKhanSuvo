@@ -17,13 +17,20 @@ const Cards = () => {
       setFilterProducts(products);
     }
   }, [products, category]);
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {filterProducts.map((product) => (
-        <Card product={product} key={product.product_id}></Card>
-      ))}
+    <div>
+      {filterProducts.length === 0 ? (
+        <p className="text-4xl text-center font-bold">no data fond</p>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filterProducts.map((product) => (
+            <Card product={product} key={product.product_id}></Card>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
-
+s;
 export default Cards;

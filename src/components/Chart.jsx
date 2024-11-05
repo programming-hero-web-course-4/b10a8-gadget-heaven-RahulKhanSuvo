@@ -18,8 +18,8 @@ const Chart = ({ data }) => {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Bar dataKey="price" barSize={20} fill="#413ea0" />
-        <Area dataKey="price" fill="#8884d8" stroke="#8884d8" />
+        <Area dataKey="price" fill="#EFE1FB" stroke="#8884d8" />
+        <Bar dataKey="price" barSize={20} fill="#9538E2" />
         <Scatter dataKey="rating" fill="red" />
       </ComposedChart>
     </ResponsiveContainer>

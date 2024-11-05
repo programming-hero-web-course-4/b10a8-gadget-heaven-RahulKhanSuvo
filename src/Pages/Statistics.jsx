@@ -14,7 +14,7 @@ const Statistics = () => {
           title={"Statistics"}
         ></SubHeading>
       </div>
-      <div className="container mx-auto bg-white mt-3">
+      <div className="container mx-auto bg-white mt-16">
         <Chart data={data}></Chart>
       </div>
     </div>

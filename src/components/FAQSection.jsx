@@ -37,7 +37,7 @@ const FAQSection = () => {
 
   return (
     <div className="bg-gray-50">
-      <div className=" p-8 rounded  max-w-4xl mx-auto">
+      <div className=" p-8 rounded container mx-auto">
         <h2 className="text-3xl font-semibold text-green-700 mb-4">FAQs</h2>
         <p className="text-gray-700 mb-8">
           Find answers to common questions about our ceramic products, ordering,
