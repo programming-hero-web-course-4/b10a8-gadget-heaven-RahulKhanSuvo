@@ -5,45 +5,55 @@ import CartCard from "./CartCard";
 import RemoveContext from "../Utils/RemoveContext";
 import Modal from "./Modal";
 import { useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+
 const Cart = () => {
   const { removeCartLove, resetCartAndLoves } = useContext(RemoveContext);
-
   const navigation = useNavigate();
   const [product, setProduct] = useState([]);
   const [cost, setCost] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Load cart data initially
   useEffect(() => {
     const cartData = getAllCarts();
     setProduct(cartData);
-    const totalCost = cartData.reduce((sum, item) => sum + item.price, 0);
-    setCost(totalCost);
   }, []);
+
+  // Update total cost whenever the product list changes
+  useEffect(() => {
+    const totalCost = product.reduce((sum, item) => sum + item.price, 0);
+    setCost(totalCost);
+  }, [product]);
+
   const handelSort = () => {
     const sorted = [...product].sort((a, b) => b.price - a.price);
     setProduct(sorted);
   };
+
   const handelRemove = (id) => {
     removeCart(id);
     const cartData = getAllCarts();
     setProduct(cartData);
   };
+
   const openModal = () => {
     setIsModalOpen(true);
   };
+
   const closeModal = () => {
     setIsModalOpen(false);
     navigation("/");
     localStorage.clear();
     resetCartAndLoves();
   };
+
   return (
     <div>
       <div className="mx-6">
         <div className="flex mb-11 mt-12 justify-between">
           <h1 className="font-bold text-xl">Cart</h1>
           <div className="flex items-center gap-4">
-            <h3 className="font-bold text-lg">Total Cost:{cost}</h3>
+            <h3 className="font-bold text-lg">Total Cost: {cost}</h3>
             <button
               className="px-5 rounded-full py-3 border font-semibold text-[#9538E2] border-[#9538E2]"
               onClick={handelSort}
@@ -67,7 +77,7 @@ const Cart = () => {
                 handelRemove={handelRemove}
                 item={item}
                 key={item.product_id}
-              ></CartCard>
+              />
             ))}
           </div>
         ) : (
@@ -81,10 +91,10 @@ const Cart = () => {
           </h3>
           <h1 className="font-bold border-b pb-3">Payment Successfully</h1>
           <p className="text-gray-400 font-medium">Thanks for purchasing.</p>
-          <p>Total:{cost}</p>
+          <p>Total: {cost}</p>
           <button
             onClick={closeModal}
-            className="bg-[#EBEAEA] rounded-full w-full hover:text-white px-4 py-2 text-black hover:bg-[#9538E2] "
+            className="bg-[#EBEAEA] rounded-full w-full hover:text-white px-4 py-2 text-black hover:bg-[#9538E2]"
           >
             Close
           </button>
