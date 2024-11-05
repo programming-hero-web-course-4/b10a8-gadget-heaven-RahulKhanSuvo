@@ -10,7 +10,6 @@ import { addLove, getAllLove } from "../Utils/loveList";
 import { Helmet } from "react-helmet-async";
 const ProductDetials = () => {
   const { handelCart, handelLoveNav } = useContext(CartContext);
-
   const { id } = useParams();
   const productsData = useLoaderData();
   const [product, setProduct] = useState({});
@@ -52,11 +51,11 @@ const ProductDetials = () => {
     setLoveAdded(true);
   };
   return (
-    <div className="relative ">
+    <div className="relative">
       <Helmet>
         <title>{`${product_title} | Gadget Heaven`}</title>
       </Helmet>
-      <div className="bg-[#9538E2] pb-64 pt-8">
+      <div className="bg-[#9538E2] pb-64  pt-8">
         <SubHeading
           title={"Product Details"}
           subTitle={
@@ -64,7 +63,7 @@ const ProductDetials = () => {
           }
         ></SubHeading>
       </div>
-      <div className="p-8 absolute flex  rounded-3xl gap-6 mx-auto w-3/4 md: translate-x-24 lg:translate-x-56  top-36 bg-white">
+      <div className="p-8 absolute flex  rounded-3xl flex-col md:flex-row gap-6 mx-auto w-3/4 md: translate-x-24 lg:translate-x-56  top-36 bg-white">
         <div>
           <img className="h-[500px]" src={product_image} alt="" />
         </div>

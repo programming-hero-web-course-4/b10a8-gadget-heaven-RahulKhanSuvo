@@ -13,13 +13,11 @@ const Cart = () => {
   const [cost, setCost] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Load cart data initially
   useEffect(() => {
     const cartData = getAllCarts();
     setProduct(cartData);
   }, []);
 
-  // Update total cost whenever the product list changes
   useEffect(() => {
     const totalCost = product.reduce((sum, item) => sum + item.price, 0);
     setCost(totalCost);
