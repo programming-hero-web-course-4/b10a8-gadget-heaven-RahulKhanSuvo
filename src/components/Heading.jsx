@@ -1,6 +1,6 @@
 const Heading = () => {
   return (
-    <div className="text-center bg-[#9538E2]  pt-12 pb-80">
+    <div className="text-center bg-[#9538E2] rounded-b-lg  pt-12 pb-80">
       <div className="container mx-auto">
         <h3 className="font-bold text-5xl text-white">
           Upgrade Your Tech Accessorize with <br />

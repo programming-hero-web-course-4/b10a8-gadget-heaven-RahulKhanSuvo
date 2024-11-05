@@ -5,6 +5,7 @@ import CartCard from "./CartCard";
 import RemoveContext from "../Utils/RemoveContext";
 import Modal from "./Modal";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 const Cart = () => {
   const { removeCartLove, resetCartAndLoves } = useContext(RemoveContext);
 

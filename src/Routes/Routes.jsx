@@ -35,6 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/statistics",
+        loader: () => fetch("../products.json"),
         element: <Statistics></Statistics>,
       },
       {

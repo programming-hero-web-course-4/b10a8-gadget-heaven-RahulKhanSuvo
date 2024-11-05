@@ -17,7 +17,7 @@ const NavBar = () => {
           pathname === "/category/Laptop" ||
           pathname === "/category/Accessories" ||
           pathname === "/category/Smart%20Watches"
-            ? "text-white pt-4"
+            ? "text-white pt-6"
             : "text-black  py-6 "
         } justify-between`}
       >

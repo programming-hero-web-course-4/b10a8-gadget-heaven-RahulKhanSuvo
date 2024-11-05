@@ -6,7 +6,7 @@ import Categories from "../components/Categories";
 const Home = () => {
   const categories = useLoaderData();
   return (
-    <div className="  ">
+    <div className=" ">
       <div className="relative">
         <Heading></Heading>
         <div className=" absolute -translate-y-72   lg:translate-x-80 ">

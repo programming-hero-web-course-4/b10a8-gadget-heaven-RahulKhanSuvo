@@ -32,11 +32,34 @@ const MainLayout = () => {
       prevLoves.filter((item) => item.product_id !== productId)
     );
   };
-
   const resetCartAndLoves = () => {
     setProduct([]);
     setLoves([]);
   };
+  const containerBg =
+    pathname === "/" ||
+    pathname === "/category/Phone" ||
+    pathname === "/category/Laptop" ||
+    pathname === "/category/Accessories" ||
+    pathname === "/category/Smart%20Watches"
+      ? "bg-[#9538E2] mx-4 rounded-t-lg "
+      : "text-black bg-white pt-4";
+  const mainBg =
+    pathname === "/" ||
+    pathname === "/category/Phone" ||
+    pathname === "/category/Laptop" ||
+    pathname === "/category/Accessories" ||
+    pathname === "/category/Smart%20Watches"
+      ? "bg-[#F7F7F7]  pt-4"
+      : "bg-[#F7F7F7]";
+  const innerContainerMargin =
+    pathname === "/" ||
+    pathname === "/category/Phone" ||
+    pathname === "/category/Laptop" ||
+    pathname === "/category/Accessories" ||
+    pathname === "/category/Smart%20Watches"
+      ? "mx-4 "
+      : "";
   const pageMetaData = {
     "/": {
       title: "Gadget | Gadget Heaven",
@@ -64,19 +87,10 @@ const MainLayout = () => {
       title: "Wishlist | Gadget Heaven",
       description: "Explore your saved items in the wishlist.",
     },
-    "/product/:id": {
-      title: "Product Details | Gadget Heaven",
-      description: "Discover more about this gadget.",
-    },
   };
   const currentMeta = pageMetaData[pathname] || pageMetaData["/"];
-
   return (
     <HelmetProvider>
-      <Helmet>
-        <title>{currentMeta.title}</title>
-        <meta name="description" content={currentMeta.description} />
-      </Helmet>
       <CartContext.Provider
         value={{
           product,
@@ -88,15 +102,22 @@ const MainLayout = () => {
           resetCartAndLoves,
         }}
       >
-        <div className={`bg-[#D9D9D9] pt-4`}>
-          <div className={`bg-[#9538E2] mx-4 rounded-t-lg`}>
-            <div className="container mx-auto">
-              <NavBar />
+        <Helmet>
+          <title>{currentMeta.title}</title>
+          <meta name="description" content={currentMeta.description} />
+        </Helmet>
+        <div className={mainBg}>
+          <div className={containerBg}>
+            <div>
+              <div className="container mx-auto">
+                <NavBar />
+              </div>
             </div>
           </div>
-          <div className={`mx-4 min-h-[calc(100vh-280px)]`}>
+          <div className={`${innerContainerMargin} min-h-[calc(100vh-280px)]`}>
             <Outlet />
           </div>
+
           <Footer />
           <Toaster />
         </div>
