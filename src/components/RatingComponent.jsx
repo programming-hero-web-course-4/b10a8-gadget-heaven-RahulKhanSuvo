@@ -1,6 +1,6 @@
 import ReactStars from "react-rating-stars-component";
 
-const RatingComponent = () => {
+const RatingComponent = ({ count = 5, size = 24, activeColor = "#ffd700" }) => {
   const ratingChanged = (newRating) => {
     console.log(newRating);
   };
@@ -8,10 +8,10 @@ const RatingComponent = () => {
   return (
     <div>
       <ReactStars
-        count={5}
+        count={count}
         onChange={ratingChanged}
-        size={24}
-        activeColor="#ffd700"
+        size={size}
+        activeColor={activeColor}
       />
     </div>
   );

@@ -41,7 +41,7 @@ const Cards = () => {
   }
 
   return (
-    <div className="p-4">
+    <div className="">
       {filterProducts.length === 0 ? (
         <p className="text-4xl text-center">No data found</p>
       ) : (

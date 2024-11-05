@@ -24,7 +24,7 @@ const Contacts = () => {
           ></SubHeading>
         </div>
       </div>
-      <div className="flex justify-between bg-gray-50 container mx-auto">
+      <div className="flex flex-col md:flex-row justify-between bg-gray-50 container mx-auto">
         <div className="p-6 bg-gray-50 w-full md:w-1/2 lg:w-1/3">
           <h2 className="text-3xl font-bold text-gray-800">Get in touch</h2>
           <p className="mt-2 text-gray-600">

@@ -16,7 +16,7 @@ const Home = () => {
           Explore Cutting-Edge Gadgets
         </h3>
       </div>
-      <div className="flex gap-6 container mx-auto mt-12">
+      <div className="flex flex-col md:flex-row gap-6 container mx-auto mt-12">
         <div>
           <Categories categories={categories}></Categories>
         </div>

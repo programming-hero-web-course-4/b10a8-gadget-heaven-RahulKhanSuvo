@@ -52,7 +52,7 @@ const ProductDetials = () => {
     setLoveAdded(true);
   };
   return (
-    <div className="relative">
+    <div className="relative ">
       <Helmet>
         <title>{`${product_title} | Gadget Heaven`}</title>
       </Helmet>

@@ -2,11 +2,11 @@ const Heading = () => {
   return (
     <div className="text-center bg-[#9538E2] rounded-b-lg  pt-12 pb-80">
       <div className="container mx-auto">
-        <h3 className="font-bold text-5xl text-white">
+        <h3 className="font-bold text-xl md:text-5xl text-white">
           Upgrade Your Tech Accessorize with <br />
           Gadget Heaven Accessories
         </h3>
-        <p className="text-white mt-4">
+        <p className="text-white text-xs  mt-4">
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to <br /> the coolest accessories, we have
           it all!

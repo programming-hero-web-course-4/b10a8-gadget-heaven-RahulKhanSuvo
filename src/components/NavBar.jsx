@@ -1,13 +1,13 @@
 import { NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import CartContext from "../Routes/CartContext";
-
+import { FaBars } from "react-icons/fa";
 const NavBar = () => {
   const { pathname } = useLocation();
   const { product, loves } = useContext(CartContext);
-
+  const [isHere, setIsHere] = useState(false);
   return (
     <>
       <div
@@ -21,8 +21,68 @@ const NavBar = () => {
             : "text-black  py-6 "
         } justify-between`}
       >
-        <h3 className="font-bold text-lg">Gadget Heaven</h3>
-        <ul className="flex gap-8 items-center font-normal">
+        <div className="flex items-center gap-2">
+          <button onClick={() => setIsHere(!isHere)} className="md:hidden">
+            <FaBars />
+          </button>
+          <ul
+            className={`${
+              isHere ? "hidden" : ""
+            } absolute z-50 top-[72px] bg-white p-4 md:hidden gap-8 items-center font-normal shadow-lg rounded-lg`}
+          >
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "rounded-lg bg-purple-600 text-white py-2 px-4 shadow-md"
+                    : "text-gray-700 hover:bg-gray-100 rounded-lg py-2 px-4"
+                }
+                to="/"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "rounded-lg bg-purple-600 text-white py-2 px-4 shadow-md"
+                    : "text-gray-700 hover:bg-gray-100 rounded-lg py-2 px-4"
+                }
+                to="/statistics"
+              >
+                Statistics
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "rounded-lg bg-purple-600 text-white py-2 px-4 shadow-md"
+                    : "text-gray-700 hover:bg-gray-100 rounded-lg py-2 px-4"
+                }
+                to="/dashboard"
+              >
+                Dashboard
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "rounded-lg bg-purple-600 text-white py-2 px-4 shadow-md"
+                    : "text-gray-700 hover:bg-gray-100 rounded-lg py-2 px-4"
+                }
+                to="/contact"
+              >
+                Contact
+              </NavLink>
+            </li>
+          </ul>
+
+          <h3 className="font-bold text-lg">Gadget Heaven</h3>
+        </div>
+        <ul className=" hidden md:flex  gap-8 items-center font-normal">
           <li>
             <NavLink
               className={({ isActive }) =>
