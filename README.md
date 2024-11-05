@@ -1,26 +1,26 @@
 # Gadget Heaven - Tech Accessories Store
 
-Welcome to **Gadget Heaven**, an interactive, visually engaging website designed to showcase and sell the latest tech accessories. With a sleek, responsive design and user-friendly layout, this website aims to provide customers with an enjoyable browsing experience for gadgets and tech accessories.
+**Gadget Heaven** is an e-commerce platform dedicated to showcasing tech accessories with an interactive and visually engaging layout. Designed with a user-friendly structure, it provides customers an intuitive browsing experience, featuring essential e-commerce functionalities. Users can explore a range of tech products, filter by category, view detailed product descriptions, and manage their selections through a wishlist and shopping cart.
 
 ![Gadget Heaven Screenshot](/public/favicon.png)
 
 ## Live Website
 
-Visit the live website here: [Gadget Heaven - Live Site](https://example-link.com)  
-(Replace with your actual live link)
+Visit the live website here: [Gadget Heaven](https://gadget-heaven-rahul-khan-suvo.netlify.app/)  
 
 ## Requirement Document
 
-Access the requirement document here: [Requirement Document](https://example-doc-link.com)  
+Access the requirement document here: [Requirement Document](https://drive.google.com/file/d/1v9Lcp99z1TXrm4Ge7gzwA6v5_GNzoD-D/view?usp=drive_link)  
 
 
 ## Features
 
-1. **Responsive Design**: Optimized for desktops, tablets, and mobile devices.
-2. **Product Catalog**: Displays a range of tech accessories with detailed descriptions.
-3. **Category Filter**: Allows users to filter products by specific categories.
-4. **Wishlist & Cart**: Users can add items to a wishlist or cart, enhancing user engagement.
-5. **Blog Section**: Provides users with tech tips, reviews, and guides to help with product decisions.
+
+1. **Product Catalog**: Displays a range of tech accessories with detailed descriptions.
+2. **Category Filter**: Allows users to filter products by specific categories.
+3. **Wishlist & Cart**: Users can add items to a wishlist or cart, enhancing user engagement.
+4. **total cost count**:  Users can see the total value of all the products added to the card
+5. **Sort By Price**: user can sort the list of product by higher price to lower price
 
 ## React Fundamentals
 
@@ -42,10 +42,3 @@ This project utilizes the following fundamental React concepts:
 - **Frontend**: React, Tailwind CSS, React Router
 - **Backend**: Mock data (or replace with actual API if available)
 - **Development Tools**: Vite, React Hooks, JavaScript (ES6+)
-
-## Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/rahulkhansuvo/gadget-heaven.git
-   cd gadget-heaven
