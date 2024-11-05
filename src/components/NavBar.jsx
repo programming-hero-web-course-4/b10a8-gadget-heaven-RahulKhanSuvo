@@ -83,6 +83,26 @@ const NavBar = () => {
               Dashboard
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "py-1 px-2 rounded-lg text-white bg-gray-800"
+                  : `${
+                      pathname === "/" ||
+                      pathname === "/category/Phone" ||
+                      pathname === "/category/Laptop" ||
+                      pathname === "/category/Accessories" ||
+                      pathname === "/category/Smart%20Watches"
+                        ? "text-white"
+                        : "text-black"
+                    }`
+              }
+              to={"/contact"}
+            >
+              Contact
+            </NavLink>
+          </li>
         </ul>
         <div className="flex gap-3">
           <div className="relative">

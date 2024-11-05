@@ -8,6 +8,7 @@ import DashBoard from "../Pages/DashBoard";
 import Cart from "../components/Cart";
 import Wishlist from "../components/Wishlist";
 import Error from "../components/Error";
+import Contacts from "../Pages/Contacts";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
             element: <Wishlist></Wishlist>,
           },
         ],
+      },
+      {
+        path: "/contact",
+        element: <Contacts></Contacts>,
       },
     ],
   },
