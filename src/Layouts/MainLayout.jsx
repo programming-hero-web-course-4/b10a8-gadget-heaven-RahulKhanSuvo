@@ -2,31 +2,36 @@ import { Outlet, useLocation } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import { Toaster } from "react-hot-toast";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CartContext from "../Routes/CartContext";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { getAllLove } from "../Utils/loveList";
+import { getAllCarts } from "../Utils";
 
 const MainLayout = () => {
   const { pathname } = useLocation();
   const [product, setProduct] = useState([]);
   const [loves, setLoves] = useState([]);
 
-  const handelCart = (data) => {
-    if (product.some((item) => item.product_id === data.product_id)) return;
-    setProduct([...product, data]);
-  };
-
   const removeCartLove = (productId) => {
     setProduct((prevProducts) =>
       prevProducts.filter((item) => item.product_id !== productId)
     );
   };
-
-  const handelLoveNav = (data) => {
-    if (loves.some((item) => item.product_id === data.product_id)) return;
-    setLoves([...loves, data]);
+  useEffect(() => {
+    const allLove = getAllLove();
+    setLoves(allLove);
+    const allCart = getAllCarts();
+    setProduct(allCart);
+  }, []);
+  const callLoveData = () => {
+    const allLove = getAllLove();
+    setLoves(allLove);
   };
-
+  const callCartData = () => {
+    const allCart = getAllCarts();
+    setProduct(allCart);
+  };
   const removeWishList = (productId) => {
     setLoves((prevLoves) =>
       prevLoves.filter((item) => item.product_id !== productId)
@@ -94,12 +99,12 @@ const MainLayout = () => {
       <CartContext.Provider
         value={{
           product,
-          handelCart,
           removeCartLove,
           loves,
-          handelLoveNav,
           removeWishList,
           resetCartAndLoves,
+          callLoveData,
+          callCartData,
         }}
       >
         <Helmet>

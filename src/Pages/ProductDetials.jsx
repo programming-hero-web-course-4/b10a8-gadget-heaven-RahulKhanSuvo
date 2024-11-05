@@ -9,7 +9,8 @@ import CartContext from "../Routes/CartContext";
 import { addLove, getAllLove } from "../Utils/loveList";
 import { Helmet } from "react-helmet-async";
 const ProductDetials = () => {
-  const { handelCart, handelLoveNav } = useContext(CartContext);
+  const { callCartData, callLoveData } = useContext(CartContext);
+
   const { id } = useParams();
   const productsData = useLoaderData();
   const [product, setProduct] = useState({});
@@ -42,13 +43,13 @@ const ProductDetials = () => {
   } = product;
   const addToCart = (product) => {
     addCart(product);
-    handelCart(product);
     setIsAdded(true);
+    callCartData();
   };
   const addToLove = (product) => {
     addLove(product);
-    handelLoveNav(product);
     setLoveAdded(true);
+    callLoveData();
   };
   return (
     <div className="relative">
